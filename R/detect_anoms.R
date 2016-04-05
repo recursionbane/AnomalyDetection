@@ -24,7 +24,7 @@ detect_anoms <- function(data, k = 0.49, alpha = 0.05, num_obs_per_period = NULL
 
     # Check to make sure we have at least two periods worth of data for anomaly context
     if(num_obs < num_obs_per_period * 2){
-        stop("Anom detection needs at least 2 periods worth of data")
+        stop("Anom detection needs at least 2 periods worth of data; ", num_obs, " < ", num_obs_per_period, " * 2")
     }
 
     # Check if our timestamps are posix
